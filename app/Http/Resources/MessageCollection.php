@@ -15,10 +15,8 @@ class MessageCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'data' => [
-                'messages' => [
-                    $this->collection,
-                ],
+            'messages' => [
+                $this->collection,
             ],
         ];
     }

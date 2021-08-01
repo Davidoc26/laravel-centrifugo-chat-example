@@ -11,12 +11,14 @@ class Message extends Model
 {
     use HasFactory, HasEagerLimit;
 
-    public function getSender(): BelongsTo
+    protected $fillable = ['receiver_id', 'sender_id', 'body'];
+
+    public function getSender(): User
     {
         return $this->belongsTo(User::class, 'sender_id')->first();
     }
 
-    public function getReceiver(): BelongsTo
+    public function getReceiver(): User
     {
         return $this->belongsTo(User::class, 'receiver_id')->first();
     }
