@@ -29,7 +29,7 @@ CENTRIFUGO_URL=http://localhost:6060 // frontend is configured for this port
 
 5. Install node modules (npm i) and build resources (npm run dev)
 6. Run migrations (php artisan migrate)
-7. Create users (seeder will be added later)
+7. Create users with messages (php artisan db:seed)
 8. Run centrifugo server using config (./centrifugo --config=config.json)
 9. Run php server (php artisan serve or what you want)
 10. Enjoy
